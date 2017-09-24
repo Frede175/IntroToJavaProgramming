@@ -10,9 +10,9 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Chapter8 chap = new Chapter8();
+        Chapter6 chap = new Chapter6();
     
-        chap.task_25();
+        chap.task_31();
         
     }
     
