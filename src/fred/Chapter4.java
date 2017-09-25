@@ -1,3 +1,5 @@
+package fred;
+
 
 import java.util.Scanner;
 
