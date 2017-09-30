@@ -76,7 +76,11 @@ public class MyRectangle2D {
 	public boolean overlaps(MyRectangle2D rect) {
 		return 	contains(rect.getX() - rect.getWidth() / 2, rect.getY() - rect.height / 2) ||
 			contains(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.height / 2) ||
+                        contains(rect.getX() + rect.getWidth() / 2, rect.getY() - rect.height / 2) ||
+			contains(rect.getX() - rect.getWidth() / 2, rect.getY() + rect.height / 2) ||
 			rect.contains(x - width / 2, y - height / 2) ||
-			rect.contains(x + width / 2, y + height / 2);
+			rect.contains(x + width / 2, y + height / 2) ||
+                        rect.contains(x + width / 2, y - height / 2) ||
+			rect.contains(x - width / 2, y + height / 2);
 	}
 }
