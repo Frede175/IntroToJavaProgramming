@@ -70,17 +70,16 @@ public class MyRectangle2D {
 	}
 
 	public boolean contains(MyRectangle2D rect) {
-		return (rect.getX() - rect.getWidth() / 2 > this.x - width / 2 && rect.getX() + rect.getWidth() / 2 < this.x + width / 2 && rect.getY() - rect.getHeight() > this.y - height / 2 && rect.getY() + rect.getHeight() < this.y + height / 2);
+		return (rect.getX() - rect.getWidth() / 2 > this.x - width / 2 && rect.getX() + rect.getWidth() / 2 < this.x + width / 2 && rect.getY() - rect.getHeight() / 2 > this.y - height / 2 && rect.getY() + rect.getHeight() / 2 < this.y + height / 2);
 	}
 
 	public boolean overlaps(MyRectangle2D rect) {
-		return 	contains(rect.getX() - rect.getWidth() / 2, rect.getY() - rect.height / 2) ||
+		return 	!contains(rect) && 
+                        (contains(rect.getX() - rect.getWidth() / 2, rect.getY() - rect.height / 2) ||
 			contains(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.height / 2) ||
                         contains(rect.getX() + rect.getWidth() / 2, rect.getY() - rect.height / 2) ||
 			contains(rect.getX() - rect.getWidth() / 2, rect.getY() + rect.height / 2) ||
 			rect.contains(x - width / 2, y - height / 2) ||
-			rect.contains(x + width / 2, y + height / 2) ||
-                        rect.contains(x + width / 2, y - height / 2) ||
-			rect.contains(x - width / 2, y + height / 2);
+			rect.contains(x + width / 2, y + height / 2));
 	}
 }

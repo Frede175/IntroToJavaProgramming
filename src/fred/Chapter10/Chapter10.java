@@ -19,14 +19,14 @@ public class Chapter10 {
     }
     
     public void task_13() {
-        MyRectangle2D rect = new MyRectangle2D(3, 2, 6.5, 5.9);
+        MyRectangle2D rect = new MyRectangle2D(0,0, 10, 10);
         
         System.out.println("Area: " + rect.getArea());
         System.out.println("Perimeter: " + rect.getPerimeter());
         
         System.out.println("Rect contains 4, 4: " + rect.contains(4, 4));
         
-        System.out.println("Rect contains new MyRectangle2D(5, 6, 11.5, 4.2): " + rect.contains(new MyRectangle2D(5, 6, 11.5, 4.2)));
+        System.out.println("Rect contains new MyRectangle2D(5, 6, 11.5, 4.2): " + rect.contains(new MyRectangle2D(3, 3, 1,1)));
         
         System.out.println("Rect overlaps new MyRectangle2D(4, 6, 3.3, 6.4): " + rect.overlaps(new MyRectangle2D(4, 6, 3.3, 6.4)));
     }
