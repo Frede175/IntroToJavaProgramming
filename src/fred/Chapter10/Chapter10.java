@@ -11,27 +11,11 @@ package fred.Chapter10;
  */
 public class Chapter10 {
     
-    public void test() {
-        TestClass test = new TestClass();
-        TestClass2 test2 = new TestClass2();
-        
-        Test[] a = {test, test2};
-        
-        for (Test t : a) {
-            t.DoStuff();
-        }
-    }
-    
-    
     public void task_04() {
         MyPoint start = new MyPoint();
         MyPoint end = new MyPoint(10, 30.5);
         
         System.out.println("Distance: " + start.distance(end));
-        
-        
-        
-        
         
     }
     
