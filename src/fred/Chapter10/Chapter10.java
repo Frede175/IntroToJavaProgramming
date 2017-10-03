@@ -30,10 +30,9 @@ public class Chapter10 {
         
         System.out.println("Rect contains: " + rect.contains(rectCompare));
         
-<<<<<<< HEAD
         System.out.println("Rect overlaps new MyRectangle2D(4, 6, 3.3, 6.4): " + rect.overlaps(new MyRectangle2D(6,5,5,10)));
-=======
+
         System.out.println("Rect overlaps: " + rect.overlaps(rectCompare));
->>>>>>> master
+
     }
 }

@@ -18,9 +18,9 @@ public class Starter {
         Course com = new Course("COMPUTER_CODE", "Computer systems", 5);
         
         Student[] students = {
-            new Student("Frederik", "Denmark"),
-            new Student("Jeppe", "Denmark"),
-            new Student("Nick", "USA")
+            new StudentHashMap("Frederik", "Denmark"),
+            new StudentHashMap("Jeppe", "Denmark"),
+            new StudentHashMap("Nick", "USA")
         };
         
         students[0].addCourse(oop, 1);
