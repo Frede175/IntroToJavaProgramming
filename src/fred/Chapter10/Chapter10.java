@@ -28,6 +28,6 @@ public class Chapter10 {
         
         System.out.println("Rect contains new MyRectangle2D(5, 6, 11.5, 4.2): " + rect.contains(new MyRectangle2D(5, 6, 11.5, 4.2)));
         
-        System.out.println("Rect overlaps new MyRectangle2D(4, 6, 3.3, 6.4): " + rect.overlaps(new MyRectangle2D(4, 6, 3.3, 6.4)));
+        System.out.println("Rect overlaps new MyRectangle2D(4, 6, 3.3, 6.4): " + rect.overlaps(new MyRectangle2D(6,5,5,10)));
     }
 }
