@@ -1,8 +1,11 @@
 package fred;
 
 import fred.Chapter10.Chapter10;
+import fred.Chapter21.Chapter21;
 import fred.Chapter9.Chapter9;
 import fred.Custom.Starter;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,7 +19,7 @@ import fred.Custom.Starter;
  */
 public class Main {
     public static void main(String[] args) {
-        new Starter().run();
+        new Chapter21().Task_11();
         
     }
     
