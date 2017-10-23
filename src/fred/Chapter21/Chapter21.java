@@ -23,6 +23,8 @@ public class Chapter21 {
     
     
     public void Task_6() {
+        
+        System.out.println(ItemName.BLOODBAG);
         Map<Integer, Integer> occurrences = new HashMap<>();
         
         Scanner scanner = new Scanner(System.in);
@@ -128,5 +130,21 @@ public class Chapter21 {
         
         return array;
         
+    }
+}
+
+
+enum ItemName {
+    BLOODBAG("Blood bag");
+    
+    private String name;
+    
+    private ItemName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
