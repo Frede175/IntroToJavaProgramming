@@ -14,13 +14,10 @@ import fred.monopoly.Monopoly;
  */
 public class Main {
     public static void main(String[] args) {
-<<<<<<< Updated upstream
         Monopoly game = new Monopoly(2, 2);
         
         game.play();
-=======
-        new Chapter21().Task_6();
->>>>>>> Stashed changes
+       // new Chapter21().Task_6();
         
     }
     

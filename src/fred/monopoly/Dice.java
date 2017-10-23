@@ -31,18 +31,23 @@ public class Dice {
         for (Die die : dice) {
             sum += die.throwDie();
         }
-        
         return sum;
     }
     
     public boolean twoEqual() {
         Map<Integer, Integer> count = new HashMap<>();
-        
         for (Die die : dice) {
             if (count.get(die.getLastThrow()) == 1) return true;
             else count.put(count.get(die.getLastThrow()), 1);
         }
-        
         return false;
     }
+    
+    public boolean allEqual() {
+        for (int i = 1; i < numberOfDices; i++) {
+            if (dice[0].getLastThrow() != dice[i].getLastThrow()) return false;
+        }
+        return true;
+    }
+    
 }
