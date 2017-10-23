@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fred.monopoly;
+package fred.monopoly.field;
+
+import fred.monopoly.Player;
 
 /**
  *
  * @author fsr19
  */
-public class Field {
+public abstract class Field {
     private final String name;
     
     private final int number;
@@ -32,5 +34,5 @@ public class Field {
         return name;
     }
     
-    
+    public abstract void consequense(Player poorPlayer);
 }

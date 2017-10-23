@@ -5,6 +5,7 @@
  */
 package fred.monopoly;
 
+import fred.monopoly.field.*;
 import java.util.Scanner;
 
 /**
@@ -34,7 +35,43 @@ public class Monopoly {
     
     private void generateFields() {
         for (int i = 0; i < 40; i++) {
-            map[i] = new Field("Field" + i, i);
+            switch(i) {
+                case 0:
+                    map[i] = new GoField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 10:
+                    map[i] = new JailField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 20: 
+                    map[i] = new FreeParkingField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 30: 
+                    map[i] = new GoToJailField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 2:
+                case 7:
+                case 17:
+                case 22:
+                case 33:
+                case 36:
+                    map[i] = new DrawCardField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 4:
+                case 38:
+                    map[i] = new TaxField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 5:
+                case 15:
+                case 25:
+                case 35:
+                    map[i] = new StationField(MonopolyConstants.FIELD_NAMES[i], i);
+                    break;
+                case 12:
+                case 28:
+                    map[i] = new UtilityField(MonopolyConstants.FIELD_NAMES[i], i, dice);
+                default:
+                    map[i] = new PropertyField(MonopolyConstants.FIELD_NAMES[i], i);
+            }
         }
     }
     
