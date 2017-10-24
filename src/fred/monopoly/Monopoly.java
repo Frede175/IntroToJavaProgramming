@@ -70,7 +70,7 @@ public class Monopoly {
                 case 28:
                     map[i] = new UtilityField(MonopolyConstants.FIELD_NAMES[i], i, dice);
                 default:
-                    map[i] = new PropertyField(MonopolyConstants.FIELD_NAMES[i], i);
+                    map[i] = new PropertyField(MonopolyConstants.FIELD_NAMES[i], i, ColorGroup.getFromMapIndex(i));
             }
         }
     }
@@ -89,16 +89,22 @@ public class Monopoly {
                 boolean proccessed = false;
                 
                 while (!proccessed) {
-                    move = scanner.nextLine();
+                    move = scanner.nextLine().toLowerCase();
                     proccessed = true;
                     switch (move) {
                     case "throw":
                         p.move(dice);
+                        processLanding(p);
                         break;
                     default:
                         System.out.print("Could not find that command! Please try agian: ");
                         proccessed = false;
                         break;
+                    }
+                    
+                    if (proccessed && dice.twoEqual()) {
+                        System.out.println("You got two equal and get to go again!");
+                        proccessed = false;
                     }
                 }
                 
@@ -108,6 +114,16 @@ public class Monopoly {
             
         }
         
+    }
+    
+    private void processLanding(Player p) {
+        if (p.getCurrentField() instanceof OwnebleField) {
+            OwnebleField field = (OwnebleField) p.getCurrentField();
+            if (!field.isOwned()) {
+                System.out.print("Do you want to buy " + field.getName() + "?");
+                
+            }
+        }
     }
     
 }

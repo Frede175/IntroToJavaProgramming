@@ -7,27 +7,22 @@ package fred.monopoly.field;
 
 import fred.monopoly.Player;
 import fred.monopoly.card.Cards;
-import fred.monopoly.card.DeedCard;
+import fred.monopoly.card.deed.DeedCard;
 
 /**
  *
  * @author fsr19
  */
-public class OwnebleField extends Field {
+public abstract class OwnebleField extends Field {
     
-    protected boolean isOwned  = false;
+    protected boolean isMortgaged = false;
     protected Player ownedBy = null;
     
     public OwnebleField(String name, int number) {
         super(name, number);
     }
 
-    @Override
-    public void consequense(Player poorPlayer) {
-        if (!isOwned) {
-            //TODO ask player if they want to buy, if not it need to go on auction
-        }
-    }
+    public abstract void consequense(Player poorPlayer);
     
     public DeedCard getDeedCard() {
         for (DeedCard card : Cards.DEED_CARDS) {
@@ -37,4 +32,22 @@ public class OwnebleField extends Field {
         }
         return null;
     }
+    
+    public boolean buyField(Player player) {
+        if (canBuy(player)) {
+            player.buyField(this);
+            ownedBy = player;
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean canBuy(Player player) {
+        return getDeedCard().getPrice() >= player.getMoney();
+    }
+    
+    public boolean isOwned() {
+        return ownedBy != null;
+    }
+   
 }

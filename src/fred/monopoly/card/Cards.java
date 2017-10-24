@@ -5,6 +5,11 @@
  */
 package fred.monopoly.card;
 
+import fred.monopoly.card.deed.UtilityCard;
+import fred.monopoly.card.deed.DeedCard;
+import fred.monopoly.card.deed.PropertyCard;
+import fred.monopoly.card.deed.StationCard;
+
 /**
  *
  * @author fsr19

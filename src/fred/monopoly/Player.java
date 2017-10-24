@@ -5,9 +5,11 @@
  */
 package fred.monopoly;
 
-import fred.monopoly.card.DeedCard;
+import fred.monopoly.card.deed.DeedCard;
+import fred.monopoly.field.ColorGroup;
 import fred.monopoly.field.Field;
 import fred.monopoly.field.OwnebleField;
+import fred.monopoly.field.PropertyField;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 public class Player {
     private final String name;
     
-    private Field currentField;
+    private int currentField;
     
     private final Field[] map;
     
@@ -27,7 +29,7 @@ public class Player {
     
     private int money = MonopolyConstants.START_MONEY;
     
-    public Player(String name, Field startField, Field[] map) {
+    public Player(String name, int startField, Field[] map) {
         this.name = name;
         currentField = startField;
         this.map = map;
@@ -37,7 +39,7 @@ public class Player {
         return name;
     }
 
-    public Field getCurrentField() {
+    public int getCurrentField() {
         return currentField;
     }
     
@@ -45,11 +47,9 @@ public class Player {
         int t = die.throwDice();
         System.out.println("You threw: " + t);
         
-        int nextField = (currentField.getNumber() + t) % 40;
+        currentField = (currentField + t) % 40;
         
-        currentField = map[nextField];
-        
-        System.out.println("You landed on " + currentField.getName());
+        System.out.println("You landed on " + map[currentField].getName());
     }
     
     public boolean buyField(OwnebleField field) {
@@ -73,5 +73,26 @@ public class Player {
     
     public boolean ownesField(OwnebleField field) {
         return ownedFields.contains(field);
+    }
+    
+    public boolean ownsAllPropertiesInColorGroup(ColorGroup color) {
+        int count = 0;
+        for (OwnebleField field : ownedFields) {
+            if (field instanceof PropertyField) {
+                PropertyField f = (PropertyField) field;
+                if (f.getColorGroup() == color) count++;
+            }
+        }
+        return count == color.getNumberOfPropertiesInGroup();
+    }
+    
+    public int getMoney() {
+        return money;
+    }
+
+    public void setPos(int mapPos) {
+        currentField = mapPos;
+        System.out.println("You landed on " + map[currentField].getName());
+        //map[currentField].consequense(this);
     }
 }

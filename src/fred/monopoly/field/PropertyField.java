@@ -6,7 +6,7 @@
 package fred.monopoly.field;
 
 import fred.monopoly.Player;
-import java.awt.Color;
+import fred.monopoly.card.deed.PropertyCard;
 
 /**
  *
@@ -14,23 +14,42 @@ import java.awt.Color;
  */
 public class PropertyField extends OwnebleField {
     
-    Color colorFamily;
+    private final ColorGroup colorFamily;
     
-    public PropertyField(String name, int number) {
+    private int numberOfHouses = 0;
+    
+    public PropertyField(String name, int number, ColorGroup colorFamily) {
         super(name, number);
+        this.colorFamily = colorFamily;
+    }
+    
+    public void buyHouse() {
+        PropertyCard card = (PropertyCard) getDeedCard();
+        if (numberOfHouses < 5 && ownedBy.ownsAllPropertiesInColorGroup(colorFamily) && card.getHouseCost() <= ownedBy.getMoney()) {
+            ownedBy.removeMoney(card.getHouseCost());
+            numberOfHouses++;
+        }
     }
 
     @Override
     public void consequense(Player poorPlayer) {
-        if (isOwned) {
+        if (ownedBy != null) {
             if (poorPlayer != ownedBy) {
-                //int amoutToPay
+                int amoutToPay = 0;
+                if (ownedBy.ownsAllPropertiesInColorGroup(colorFamily) && numberOfHouses == 0) {
+                    amoutToPay = getDeedCard().getRent(numberOfHouses) * 2;
+                } else {
+                    amoutToPay = getDeedCard().getRent(numberOfHouses);
+                }
+                
+                poorPlayer.removeMoney(amoutToPay);
+                System.out.println("You landed on " + getName() + " and have to pay " + amoutToPay + " to " + ownedBy.getName() + ".");
             }
         }
-        
-        super.consequense(poorPlayer); 
     }
     
-    
+    public ColorGroup getColorGroup() {
+        return colorFamily;
+    }
     
 }

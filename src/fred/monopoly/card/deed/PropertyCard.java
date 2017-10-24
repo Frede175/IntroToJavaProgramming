@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fred.monopoly.card;
+package fred.monopoly.card.deed;
 
 import fred.monopoly.field.OwnebleField;
 
@@ -40,5 +40,9 @@ public class PropertyCard extends DeedCard {
      */
     public int getRent(int numberOfProperties) {
         return rent[numberOfProperties];
+    }
+    
+    public int getHouseCost() {
+        return houseCost;
     }
 }
