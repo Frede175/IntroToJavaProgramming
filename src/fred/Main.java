@@ -14,7 +14,8 @@ import fred.monopoly.Monopoly;
  */
 public class Main {
     public static void main(String[] args) {
-        Monopoly game = new Monopoly(2, 2);
+        Monopoly game = Monopoly.getInstance();
+        game.init(2, 2);
         
         game.play();
        // new Chapter21().Task_6();

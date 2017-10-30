@@ -45,6 +45,8 @@ public class PropertyField extends OwnebleField {
                 poorPlayer.removeMoney(amoutToPay);
                 System.out.println("You landed on " + getName() + " and have to pay " + amoutToPay + " to " + ownedBy.getName() + ".");
             }
+        } else {
+            super.consequense(poorPlayer);
         }
     }
     

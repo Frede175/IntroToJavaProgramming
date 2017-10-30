@@ -6,6 +6,7 @@
 package fred.monopoly.field;
 
 import fred.monopoly.Dice;
+import fred.monopoly.Player;
 
 /**
  *
@@ -18,6 +19,15 @@ public class UtilityField extends OwnebleField {
     public UtilityField(String name, int number, Dice dice) {
         super(name, number);
         this.dice = dice;
+    }
+
+    @Override
+    public void consequense(Player poorPlayer) {
+        if (ownedBy != null) {
+            
+        } else {
+            super.consequense(poorPlayer);
+        }
     }
     
 }

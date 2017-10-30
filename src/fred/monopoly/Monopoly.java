@@ -22,15 +22,27 @@ public class Monopoly {
     
     private Dice dice;
     
-    public Monopoly(int numberOfPlayers, int numberOfDice) {
+    private static Monopoly instance;
+    
+    private Monopoly() {
+    }
+    
+    public void init(int numberOfPlayers, int numberOfDice) {
         dice = new Dice(numberOfDice);
         players = new Player[numberOfPlayers];
         
         generateFields();
         
         for (int i = 0; i < numberOfPlayers; i++) {
-            players[i] = new Player("Player" + i, map[0], map);
+            players[i] = new Player("Player" + i, 0, map);
         }
+    }
+    
+    public static Monopoly getInstance() {
+        if (instance == null) {
+            instance = new Monopoly();
+        }
+        return instance;
     }
     
     private void generateFields() {
@@ -117,13 +129,11 @@ public class Monopoly {
     }
     
     private void processLanding(Player p) {
-        if (p.getCurrentField() instanceof OwnebleField) {
-            OwnebleField field = (OwnebleField) p.getCurrentField();
-            if (!field.isOwned()) {
-                System.out.print("Do you want to buy " + field.getName() + "?");
-                
-            }
-        }
+        map[p.getCurrentField()].consequense(p);
+    }
+
+    public Player[] getPlayers() {
+        return players;
     }
     
 }

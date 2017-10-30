@@ -37,7 +37,7 @@ public class Dice {
     public boolean twoEqual() {
         Map<Integer, Integer> count = new HashMap<>();
         for (Die die : dice) {
-            if (count.get(die.getLastThrow()) == 1) return true;
+            if (count.getOrDefault(die.getLastThrow(), 0) == 1) return true;
             else count.put(count.get(die.getLastThrow()), 1);
         }
         return false;
