@@ -3,10 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/fsr19/Documents/NetBeansProjects/IntroToJavaProgramming/src/fred/monopoly/Monopoly.java</file>
-            <file>file:/C:/Users/fsr19/Documents/NetBeansProjects/IntroToJavaProgramming/src/fred/monopoly/Player.java</file>
-            <file>file:/C:/Users/fsr19/Documents/NetBeansProjects/IntroToJavaProgramming/src/fred/monopoly/card/drawable/AdvanceTo.java</file>
-            <file>file:/C:/Users/fsr19/Documents/NetBeansProjects/IntroToJavaProgramming/src/fred/monopoly/card/drawable/Card.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/TaxField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/deed/DeedCard.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/PropertyField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/StationField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/DrawCardField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/gui/fxml/monopoly-board.jpg</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/Player.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/JailField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/GoToJailField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/Field.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/MonopolyConstants.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/Main.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/GUI.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/Cards.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/UtilityField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/deed/UtilityCard.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/deed/StationCard.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/deed/PropertyCard.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/card/drawable/Card.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/field/OwnebleField.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/gui/controller/MainController.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/Monopoly.java</file>
+            <file>file:/C:/Users/fsr19/Documents/Programming/IntroToJavaProgramming/src/fred/monopoly/gui/fxml/Main.fxml</file>
         </group>
     </open-files>
 </project-private>

@@ -1,6 +1,6 @@
 package fred;
 
-import fred.monopoly.Monopoly;
+import fred.monopoly.Start;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,10 +14,9 @@ import fred.monopoly.Monopoly;
  */
 public class Main {
     public static void main(String[] args) {
-        Monopoly game = Monopoly.getInstance();
-        game.init(2, 2);
-        
-        game.play();
+        //GUI gui = new GUI();
+        //gui.start();
+        System.out.println("Wrong start for Monopoly");
        // new Chapter21().Task_6();
         
     }

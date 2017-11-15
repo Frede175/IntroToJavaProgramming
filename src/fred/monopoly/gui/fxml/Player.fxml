@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="228.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fred.monopoly.gui.controller.PlayerController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="playerName" text="Player name">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+            <HBox>
+               <children>
+                      <Label fx:id="playerMoney" maxWidth="1.7976931348623157E308" text="Player money" HBox.hgrow="ALWAYS">
+                          <font>
+                              <Font size="16.0" />
+                          </font>
+                          <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                          </VBox.margin>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                      </Label>
+                      <Label alignment="CENTER_RIGHT" text="\$">
+                          <font>
+                              <Font size="16.0" />
+                          </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                      </Label>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#Test" text="Button" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
