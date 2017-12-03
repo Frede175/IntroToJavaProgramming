@@ -1,6 +1,9 @@
 package fred;
 
+import fred.Chapter19.Helpers;
 import fred.monopoly.Start;
+import java.util.Arrays;
+import java.util.Random;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,10 +17,17 @@ import fred.monopoly.Start;
  */
 public class Main {
     public static void main(String[] args) {
-        //GUI gui = new GUI();
-        //gui.start();
-        System.out.println("Wrong start for Monopoly");
-       // new Chapter21().Task_6();
+        Integer[] numbers = new Integer[1000];
+        
+        Random random = new Random();
+        
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = random.nextInt(numbers.length);
+        }
+        
+        Arrays.sort(numbers);
+        
+        System.out.println(Helpers.binarySearch(numbers, 999) + "");
         
     }
     
